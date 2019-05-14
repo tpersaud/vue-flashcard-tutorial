@@ -1,0 +1,30 @@
+{
+  "name": "flashcard-app",
+  "version": "1.0.0",
+  "description": "Team Treehouse Vue Tutorial for building a flashcard app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tpersaud/vue-flashcard-tutorial.git"
+  },
+  "keywords": [
+    "nodejs",
+    "vue",
+    "bootstrap"
+  ],
+  "author": "Terrence Persaud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tpersaud/vue-flashcard-tutorial/issues"
+  },
+  "homepage": "https://github.com/tpersaud/vue-flashcard-tutorial#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "vue": "^2.6.10"
+  }
+}
