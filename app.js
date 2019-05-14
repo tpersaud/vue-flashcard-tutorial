@@ -20,18 +20,44 @@ const cards = [
     back: 'Dr. Evelyn Boyd Granville',
     flipped: false,
   },
-]; 
+];
+
+let isNull = function(str) {
+  return str === null || str.match(/^ *$/) !== null;
+}
 
 new Vue({
   el: '#flashcard-app',
   data: {
     cards: cards,
+    newFront:'',
+    newBack:'',
+    error:false
   },
   methods: {
-    toggleCard: function(card){
+    toggleCard: function(card) {
       card.flipped = !card.flipped      
     },
-    deleteCard: function(index){
+    insertCard: function() {
+      let front = this.newFront;
+      let back = this.newBack;
+
+      if(!isNull(front) && !isNull(back)) {
+        cards.push({
+          front,
+          back,
+          flipped: false
+        });
+
+        this.newFront = '';
+        this.newBack = '';
+        this.error = false;
+      } else {
+        this.error = true;
+      }
+
+    },
+    deleteCard: function(index) {
       cards.splice(index,1);
     }
   }

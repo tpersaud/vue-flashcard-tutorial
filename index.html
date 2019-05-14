@@ -16,19 +16,19 @@
     <div class="flashcard-form container">
       <div class="row py-2">
         <div class="col-md-6">
-            <label for="front">Front</label>
-            <input type="text" id="front" class="form-control">
+            <label for="newFront">Front</label>
+            <input v-model="newFront" type="text" id="front" class="form-control">
         </div>
         <div class="col-md-6">
-            <label for="back">Back</label>
-            <input type="text" id="back" class="form-control">
+            <label for="newBack">Back</label>
+            <input v-model="newBack" v-on:keypress.enter="insertCard" type="text" id="back" class="form-control">
         </div>
       </div>
       <div class="row py-2">
         <div class="col-md-6">
-          <button class="btn btn-primary">Add a New Card</button>
+          <button v-on:click="insertCard" class="btn btn-primary">Add a New Card</button>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" v-show="error">
           <span class="error">Oops! Flashcards need a front and a back.</span>
         </div>
       </div>
