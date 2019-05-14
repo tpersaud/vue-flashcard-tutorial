@@ -4,29 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
   <title>Flash!</title>
 </head>
 <body>
-  <div id="flashcard-app" class="container">
+  <div id="flashcard-app" class="container-fluid">
 
     <h1>Flashcard App!</h1>
 
-    <div class="flashcard-form">
-      <label for="front">Front
-        <input type="text" id="front">
-      </label>
-      <label for="back">Back
-        <input type="text" id="back">
-      </label>
-      <button>Add a New Card</button>
-      <span class="error">Oops! Flashcards need a front and a back.</span>
+    <div class="flashcard-form container">
+      <div class="row py-2">
+        <div class="col-md-6">
+            <label for="front">Front</label>
+            <input type="text" id="front" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label for="back">Back</label>
+            <input type="text" id="back" class="form-control">
+        </div>
+      </div>
+      <div class="row py-2">
+        <div class="col-md-6">
+          <button class="btn btn-primary">Add a New Card</button>
+        </div>
+        <div class="col-md-6">
+          <span class="error">Oops! Flashcards need a front and a back.</span>
+        </div>
+      </div>
     </div>
 
-    <ul class="flashcard-list" v-for="card in cards">
-      <li>
+    <ul class="flashcard-list container">
+      <li v-for="card in cards" class="col-md-3">
         <p class="card">
             <span class="delete-card">X</span>
         </p>
@@ -37,9 +46,9 @@
     </ul>
   </div>
 
-  <!-- <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
   <script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="./node_modules/vue/dist/vue.js"></script>
   <script src="app.js"></script>
 </body>

@@ -1,6 +1,9 @@
 body {
-  font-family: 'Montserrat', sans-serif;
   text-align: center;
+}
+
+h1{
+  font-size: 5em;
 }
 
 ul {
@@ -22,8 +25,8 @@ li {
 
 .card {
   display: block;
-  width: 150px;
-  height: 175px;
+  width: auto;
+  min-height: 225px;
   padding: 80px 50px;
   background-color: #51aae5;
   border-radius: 7px;
